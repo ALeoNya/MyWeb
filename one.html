@@ -23,27 +23,15 @@
             <img src="12.png" data-speed="5" class="layer">
             <!-- <h2 class="layer" data-speed="2">Parallax</h2>  -->
             <div id="shiny-shadow">
-
-                <a href="https://www.baidu.com/"><button><span>开始你的旅程</span></button></a>
                 <a href="https://www.baidu.com/"><button><span>开始你的旅程</span></button></a>
     
             </div>
             
         </section>
-        <script>
-            document.addEventListener("mousemove",parallax);
-            function parallax(e){
-                this.querySelectorAll('.layer').forEach(layer => {
-                    const speed = layer.getAttribute('data-speed')
-
-                    const x = (window.innerWidth - e.pageX*speed)/100
-                    const y = (window.innerHeight - e.pageY*speed)/100
-
-                    // layer.style.transform = 'translateX(${x}px) translateY(${y}px)'
-                    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-                })
-            }
+        <canvas id="canvas"></canvas>
+        <script src="./main.js">   
         </script>
+        
     </body>
 </html>
 
